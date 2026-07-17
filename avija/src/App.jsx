@@ -7,7 +7,7 @@ import About from './components/About/About'
 import Services from './components/Services/Services'
 import Blogs from './components/Blogs/Blog'
 import Contact from './components/Contact/Contact'
-import Footer from './components/Footer/Footer'
+import Footer from './components/Footer/footer'
 import Admin from './components/Admin'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './components/Login'
