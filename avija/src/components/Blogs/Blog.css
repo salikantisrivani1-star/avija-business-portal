@@ -1,0 +1,79 @@
+.blogs{
+  margin: 80px auto;
+  padding: 0 80px;
+  position: relative;
+}
+.next-btn, .back-btn{
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding:15px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #212EA0;
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0.95;
+}
+.next-btn:hover, .back-btn:hover{
+  background: #0d1a66;
+  transition: all 0.3s ease-in-out;
+}
+.next-btn{
+  right: 0;
+  left: auto;
+}
+.back-btn{
+  left: 0;
+  right: auto;
+}
+.next-btn img, .back-btn img{
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+  display: block;
+}
+.slider{
+  overflow: hidden;
+  margin: 40px 0;
+}
+.slider ul{
+  display: flex;
+  width: 200%;
+  overflow-x: hidden;
+  transition: 0.5s;
+  transform: translateX(-25%);
+}
+.slider ul li{
+  list-style: none;
+  width: 50%;
+  padding: 0 10px;
+}
+.slide{
+  box-shadow:  0 0 20px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 10px;
+  color: #676767;
+  line-height: 1.4;
+ 
+}
+.slide img{
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.slide h3{
+  color: #212EA0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

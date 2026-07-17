@@ -1,0 +1,170 @@
+.services-page{
+    width: 90%;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* Hero Section */
+
+.hero-section{
+    background:#EEF4FF;
+    padding:80px 30px;
+    text-align:center;
+    border-radius:20px;
+    margin-bottom:50px;
+}
+
+.hero-section h1{
+    color:#212EA0;
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.hero-section p{
+    color:#444;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.hero-section h1{
+    font-size: 42px;
+    color: #212EA0;
+    margin-bottom: 20px;
+}
+
+.hero-section p{
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: auto;
+}
+
+/* Service Cards */
+
+.service-card{
+    background: #FFFFFF;
+    border-left: 6px solid #212EA0;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+}
+
+.service-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(33,46,160,0.18);
+}
+
+.service-card h2{
+    color:#212EA0;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.service-card p{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.service-card ul{
+    padding-left:20px;
+}
+
+.service-card li{
+    color:#444;
+    margin-bottom:10px;
+}
+
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 50px;   /* Increase space between cards */
+    margin-top: 40px;
+}
+
+
+/* Why Choose Us */
+
+.why-section{
+    background: #f5f7ff;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 60px;
+}
+
+.why-section h2{
+    text-align: center;
+    color: #212EA0;
+    margin-bottom: 25px;
+}
+
+.why-section ul{
+    list-style: none;
+    padding: 0;
+}
+
+.why-section li{
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+/* Contact Section */
+
+.contact-section{
+    background: #212EA0;
+    color: white;
+    text-align: center;
+    padding: 50px 30px;
+    border-radius: 15px;
+}
+
+.contact-section h2{
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+.contact-section p{
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.contact-btn{
+    background: white;
+    color: #212EA0;
+    border: none;
+    padding: 14px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-btn:hover{
+    background: #ffd700;
+    color: black;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero-section h1{
+    font-size:32px;
+}
+
+.hero-section p{
+    font-size:16px;
+}
+
+.contact-section h2{
+    font-size:28px;
+}
+
+.contact-section p{
+    font-size:16px;
+}
+
+}

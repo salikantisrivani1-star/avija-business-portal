@@ -1,0 +1,22 @@
+.contact-page{
+    width:90%;
+    margin:auto;
+    padding:80px 0;
+}
+
+.contact-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.contact-header h1{
+    color:#212EA0;
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.contact-header p{
+    color:#555;
+    font-size:18px;
+    line-height:1.7;
+}

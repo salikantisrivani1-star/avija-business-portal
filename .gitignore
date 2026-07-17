@@ -1,0 +1,10 @@
+# Frontend
+avija/node_modules/
+avija/dist/
+
+# Backend
+backend/node_modules/
+backend/.env
+
+# General
+.env

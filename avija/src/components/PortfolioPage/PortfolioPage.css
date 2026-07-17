@@ -1,0 +1,132 @@
+.portfolio-page{
+    width: 90%;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* Header */
+
+.portfolio-header{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.portfolio-header h1{
+    color: #212EA0;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.portfolio-header p{
+    color: #555;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Event Cards */
+
+.portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.event-card{
+    background: #ffffff;
+    border-left: 6px solid #212EA0;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.event-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(33,46,160,0.18);
+}
+
+.event-card h2{
+    color: #212EA0;
+    margin-bottom: 15px;
+}
+
+.event-card p{
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+
+.details-btn{
+    background: #212EA0;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.details-btn:hover{
+    background: #FFD700;
+    color: black;
+}
+
+/* Contact Section */
+
+.book-section{
+    background: #EEF4FF;
+    border-radius: 20px;
+    text-align: center;
+    padding: 50px 30px;
+}
+
+.book-section h2{
+    color: #212EA0;
+    margin-bottom: 20px;
+}
+
+.book-section p{
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.book-btn{
+    background: #212EA0;
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.book-btn:hover{
+    background: #FFD700;
+    color: black;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .portfolio-header h1{
+        font-size: 34px;
+    }
+
+    .portfolio-header p{
+        font-size: 16px;
+    }
+
+    .book-section h2{
+        font-size: 28px;
+    }
+
+}

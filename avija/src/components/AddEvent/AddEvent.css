@@ -1,0 +1,55 @@
+.add-event{
+    width: 60%;
+    margin: 50px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.add-event h1{
+    text-align: center;
+    color: #212EA0;
+    margin-bottom: 30px;
+}
+
+.add-event form{
+    display: flex;
+    flex-direction: column;
+}
+
+.add-event input,
+.add-event textarea{
+    margin-bottom: 20px;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.add-event textarea{
+    height: 120px;
+    resize: none;
+}
+
+.add-event input:focus,
+.add-event textarea:focus{
+    border-color: #212EA0;
+}
+
+.add-event button{
+    background: #212EA0;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.add-event button:hover{
+    background: #FFD700;
+    color: black;
+}
