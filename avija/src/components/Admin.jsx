@@ -27,7 +27,7 @@ const Admin = () => {
       try {
 
          const response = await axios.get(
-            "http://localhost:5000/contact/all"
+            "https://avija-backend.onrender.com/contact/all"
          );
 
          setMessages(response.data);

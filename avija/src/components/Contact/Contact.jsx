@@ -18,7 +18,7 @@ const Contact = () => {
     setStatus('Sending...')
 
     try {
-      const response = await axios.post('http://localhost:5000/contact', 
+      const response = await axios.post('https://avija-backend.onrender.com/contact', 
         
       {
         name,

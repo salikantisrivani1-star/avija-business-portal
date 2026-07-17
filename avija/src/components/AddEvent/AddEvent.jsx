@@ -26,7 +26,7 @@ const AddEvent = () => {
     try {
 
       const response = await axios.post(
-        "http://localhost:5000/events/add",
+        "https://avija-backend.onrender.com/events/add",
         event
       );
 
