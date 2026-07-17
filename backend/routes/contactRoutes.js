@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
 
 router.post("/", async (req, res) => {
 
-   const { name, phone, message } = req.body;
+   const { name, phone, email, message } = req.body;
 
    console.log(req.body);
 
@@ -24,9 +24,10 @@ router.post("/", async (req, res) => {
 
       // SAVE DATA IN MONGODB
 
-      await Contact.create({
+      await contact.create({
          name,
          phone,
+         email,
          message
       });
 
@@ -89,7 +90,7 @@ router.get("/all", async (req, res) => {
 
    try {
 
-      const messages = await Contact.find();
+      const messages = await contact.find();
 
       res.json(messages);
 
