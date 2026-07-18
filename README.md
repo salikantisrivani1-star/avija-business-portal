@@ -4,6 +4,10 @@ A full-stack Event Management web application built using **React, Vite, Node.js
 
 ---
 
+## 🌐 Live Demo
+
+🔗 https://avija-business-portal.vercel.app/
+
 ## 🚀 Features
 
 ### 👥 User Features
