@@ -1,9 +1,10 @@
 import express from "express";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import contact from "../models/contact.js";
 
 const router = express.Router();
 
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // TEST API
 
@@ -33,45 +34,56 @@ router.post("/", async (req, res) => {
 
       // EMAIL SETUP
 
-      const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-  connectionTimeout: 30000,
-  greetingTimeout: 30000,
-  socketTimeout: 30000,
-});
+//       const transporter = nodemailer.createTransport({
+//   host: "smtp.gmail.com",
+//   port: 587,
+//   secure: false,
+//   auth: {
+//     user: process.env.EMAIL_USER,
+//     pass: process.env.EMAIL_PASS,
+//   },
+//   connectionTimeout: 30000,
+//   greetingTimeout: 30000,
+//   socketTimeout: 30000,
+// });
 
-      // EMAIL CONTENT
+//       // EMAIL CONTENT
 
-      const mailOptions = {
+//       const mailOptions = {
 
-         from: process.env.EMAIL_USER,
+//          from: process.env.EMAIL_USER,
 
-         to: process.env.EMAIL_USER,
+//          to: process.env.EMAIL_USER,
 
-         subject: "New Contact Message",
+//          subject: "New Contact Message",
 
-         text: `
+//          text: `
+// Name: ${name}
+// Phone: ${phone}
+// Message: ${message}
+//          `
+//       };
+
+//       // SEND EMAIL
+// transporter.verify((error, success) => {
+//     if (error) {
+//         console.error("Transporter Error:", error);
+//     } else {
+//         console.log("Transporter is ready");
+//     }
+// });
+//       await transporter.sendMail(mailOptions);
+await resend.emails.send({
+  from: "onboarding@resend.dev",
+  to: "salikantisrivani2@gmail.com",
+  subject: "New Contact Message",
+  text: `
 Name: ${name}
 Phone: ${phone}
+Email: ${email}
 Message: ${message}
-         `
-      };
-
-      // SEND EMAIL
-transporter.verify((error, success) => {
-    if (error) {
-        console.error("Transporter Error:", error);
-    } else {
-        console.log("Transporter is ready");
-    }
+  `,
 });
-      await transporter.sendMail(mailOptions);
       console.log("Email sent successfully");
       res.json({
          success: true,
@@ -79,7 +91,7 @@ transporter.verify((error, success) => {
       });
 
    } catch (error) {
-   console.error("Nodemailer Error:", error);
+   console.error("Resend Error:", error);
    res.status(500).json({
       success: false,
       message: "Failed to send email"
