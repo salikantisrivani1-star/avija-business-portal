@@ -34,23 +34,25 @@ router.post("/", async (req, res) => {
       // EMAIL SETUP
 
       const transporter = nodemailer.createTransport({
-
-         service: "gmail",
-
-         auth: {
-            user: "salikantisrivani2@gmail.com",
-            pass: "deaijiwvncvacbgt"
-         }
-
-      });
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false,
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+  connectionTimeout: 30000,
+  greetingTimeout: 30000,
+  socketTimeout: 30000,
+});
 
       // EMAIL CONTENT
 
       const mailOptions = {
 
-         from: "salikantisrivani2@gmail.com",
+         from: process.env.EMAIL_USER,
 
-         to: "salikantisrivani2@gmail.com",
+         to: process.env.EMAIL_USER,
 
          subject: "New Contact Message",
 
