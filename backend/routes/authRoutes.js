@@ -9,7 +9,7 @@ router.post("/", async (req, res) => {
 
       const { email, password } = req.body;
 
-      const admin = await Admin.findOne({
+      const adminData = await Admin.findOne({
          email: email,
          password: password
       });
