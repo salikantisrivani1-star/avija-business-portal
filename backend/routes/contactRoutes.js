@@ -62,24 +62,27 @@ Message: ${message}
       };
 
       // SEND EMAIL
-
+transporter.verify((error, success) => {
+    if (error) {
+        console.error("Transporter Error:", error);
+    } else {
+        console.log("Transporter is ready");
+    }
+});
       await transporter.sendMail(mailOptions);
-
+      console.log("Email sent successfully");
       res.json({
          success: true,
          message: "Email sent successfully & data saved"
       });
 
-   } catch(error){
-
-      console.log(error);
-
-      res.status(500).json({
-         success:false,
-         message:"Failed to send email"
-      });
-
-   }
+   } catch (error) {
+   console.error("Nodemailer Error:", error);
+   res.status(500).json({
+      success: false,
+      message: "Failed to send email"
+   });
+}
 
 });
 
