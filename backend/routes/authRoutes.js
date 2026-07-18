@@ -1,5 +1,5 @@
 import express from "express";
-import admin from "../models/admin.js";
+import Admin from "../models/admin.js";
 
 const router = express.Router();
 
@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
          password: password
       });
 
-      if (admin) {
+      if (adminData) {
 
          res.json({
             success: true,
