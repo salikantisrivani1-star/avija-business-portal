@@ -75,7 +75,7 @@ router.post("/", async (req, res) => {
 //       await transporter.sendMail(mailOptions);
 await resend.emails.send({
   from: "onboarding@resend.dev",
-  to: "salikantisrivani2@gmail.com",
+  to: "salikantisrivani1@gmail.com",
   subject: "New Contact Message",
   text: `
 Name: ${name}
