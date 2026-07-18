@@ -105,16 +105,29 @@ MONGO_URL=Your MongoDB Connection String
 
 ---
 
+
 ## 📸 Screenshots
 
-You can add screenshots of:
+### 🏠 Home Page
+![home Page](screenshots/homepage.png)
 
-* Home Page
-* Services Page
-* Portfolio Page
-* Contact Page
-* Admin Dashboard
+### 👥 About Page
+![about Page](screenshots/aboutpage.png)
 
+### 🖼️ Blogs Page
+![blogs Page](screenshots/blogspage.png)
+
+### 📝 contact Page
+![contact Page](screenshots/contactpage.png)
+
+###  OurEvents Page
+![OurEvents Page](screenshots/OurEvents.png)
+
+###  recentevents Page
+![recentevents Page](screenshots/recentevents.png)
+
+###  services Page
+![services Page](screenshots/servicespage.png)
 ---
 
 ## 📌 Future Improvements
